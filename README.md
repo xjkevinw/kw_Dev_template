@@ -91,12 +91,14 @@ my-project/
 创建任务文件：复制 template_task.md，新建 TASKS/003_feature.md。
 
 加载上下文：在 Claude Code 终端中输入：
+  <code>
+    Bash
+    
+    /read .ai_context/SYSTEM_PROFILE.md <br>
+    /read .ai_context/PROJECT_CONTEXT.md <br>
+    /read .ai_context/TASKS/003_feature.md <br>
+  </code>
 
-Bash
-
-/read .ai_context/SYSTEM_PROFILE.md
-/read .ai_context/PROJECT_CONTEXT.md
-/read .ai_context/TASKS/003_feature.md
 谋定而后动 (Planning)：
 
 告诉 Claude：“请阅读上述任务文档，帮我完善‘具体实施细节’部分，不要写代码，只分析方案。”
@@ -138,12 +140,13 @@ Git Commit：“feat: implement redis caching (Step 1 of Task 003)”。
 ## 5. 修正与优化 (2025-08-24)
 **问题**：TTL 60秒太长，导致库存不同步。
 **修正方案**：改为“写入时更新缓存(Write-through)”策略。
+
 重启会话：
-
-/clear 清空上下文。
-
-/read .ai_context/TASKS/003_feature.md。
-
+  <code>
+    /clear 清空上下文。
+    /read .ai_context/TASKS/003_feature.md。
+  </code>
+  
 指令：“请阅读文档第 5 部分‘修正与优化’，帮我重构缓存逻辑。”
 
 阶段四：收尾与归档 (Finalize)
