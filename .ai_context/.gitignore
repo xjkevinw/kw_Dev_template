@@ -1,0 +1,7 @@
+# 强制 Git 追踪 .ai_context 目录
+# 因为这是项目的长期记忆，必须共享
+!TASKS/template.md
+!DECISIONS/adr-template.md
+
+# 如果你想忽略某些临时的任务草稿，可以在这里配置
+# TASKS/drafts/*
