@@ -10,6 +10,7 @@
 
 ## 2. 架构模式 (Architecture Patterns)
 - **前后端分离**: API 接口遵循 RESTful 规范。
+- **模块化设计**
 - **状态管理**: [如 使用 Zustand 管理全局状态]。
 - **目录规范**:
     - `/src/components`: UI 组件
