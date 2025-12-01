@@ -1,20 +1,14 @@
-# Project Context
+# Project Context  (项目核心说明书，请根据实际项目修改)
 
 ## 1. 项目简介
-这是一个基于 Next.js + Supabase 的电商管理后台。
-核心目标：提供极简的库存管理和订单处理功能。
+*(在此处填写项目的一句话描述，例如：这是一个基于 Next.js 的电商后台管理系统)*
 
-## 2. 关键目录结构
-- `/src/app`: App Router 路由定义
-- `/src/lib`: 数据库连接与通用工具函数
-- `/src/components/ui`: ShadcnUI 基础组件
+## 2. 核心业务实体 (Domain Entities)
+*(在此处列出核心数据模型及其关系)*
+- **User**: 系统用户，包含角色 (Admin/Customer)。
+- **Order**: 订单，关联 User 和 Products。
+- **Product**: 商品信息。
 
-## 3. 技术栈决策
-- ORM: Prisma
-- State Management: Zustand
-- Styling: TailwindCSS
-
-## 4. 业务规则 (Business Rules)
-- 用户必须登录才能访问 `/dashboard`。
-- 订单状态流转：Pending -> Paid -> Shipped -> Completed。
-- **[重要]**：删除数据必须使用软删除 (Soft Delete)，字段为 `deletedAt`。
+## 3. 关键业务规则 (Business Rules)
+- 未登录用户无法访问 `/dashboard` 开头的路由。
+- 软删除策略：所有数据删除操作均仅更新 `deletedAt` 字段，不物理删除。
