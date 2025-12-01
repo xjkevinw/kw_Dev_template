@@ -24,4 +24,4 @@
 - [ ] **代码改动摘要**: ...
 - [ ] **全局影响检查**:
     - 是否需要更新 `ARCHITECTURE.md`? (如引入新库)
-    - 是否需要更新 `PROJECT_CONTEXT.md`? (如修改业务逻辑)
+    - 是否需要更新 `PROJECT_CONTEXT.md`? (如修改业务逻辑) 是否需要更新 `ARCHITECTURE.md` 或 `PROJECT_CONTEXT.md` ?
