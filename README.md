@@ -1,7 +1,7 @@
 # dw_Dev_template
 
 # 专门的文件夹（如 .ai_context 或 docs/ai），用于存放所有 AI 相关的上下文文档。
-
+<pre>
 my-project/
 ├── .ai_context/                # 【核心】AI 大脑文件夹
 │   ├── SYSTEM_PROFILE.md       # 1. 团队/个人偏好 (Team/Personal Context)
@@ -13,5 +13,6 @@ my-project/
 │       └── template_task.md    # 任务模板
 ├── src/
 ├── ...
-└── .gitignore                  # 确保 .ai_context 被提交到仓库
+└── .gitignore                  # 确保 .ai_context 被提交到仓库 
+</pre>
 
