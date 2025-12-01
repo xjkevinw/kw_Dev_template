@@ -5,3 +5,7 @@
 
 # 如果你想忽略某些临时的任务草稿，可以在这里配置
 # TASKS/drafts/*
+
+# Python cache
+__pycache__/
+*.pyc
