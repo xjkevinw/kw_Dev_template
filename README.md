@@ -24,7 +24,6 @@ my-project/
 模板 A：团队/个人偏好 (SYSTEM_PROFILE.md)
 这个文件定义了 AI 的“人设”和基本交互规则。
 
-Markdown
 
 # AI Interaction Guidelines
 
@@ -43,8 +42,6 @@ Markdown
 - **禁止假定**：如果遇到模糊的需求，请先提问，不要自行假设。
 模板 B：项目核心上下文 (PROJECT_CONTEXT.md)
 这是项目的“说明书”，必须随着项目迭代及时更新。
-
-Markdown
 
 # Project Context
 
@@ -69,7 +66,6 @@ Markdown
 模板 C：任务规划文档 (TASKS/00X_task_name.md)
 这是视频中提到的“最重要的中间产物”。每次开发新功能或优化时，先写这个文件，再写代码。
 
-Markdown
 
 # Task: [002] 优化首页加载速度
 
@@ -138,8 +134,6 @@ Git Commit：“feat: implement redis caching (Step 1 of Task 003)”。
 打开 TASKS/003_feature.md。
 
 在底部追加一个章节：
-
-Markdown
 
 ## 5. 修正与优化 (2025-08-24)
 **问题**：TTL 60秒太长，导致库存不同步。
