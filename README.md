@@ -17,8 +17,13 @@ my-project/
 │       └── template_task.md    # 任务模板
 ├── src/
 ├── ...
-└── .gitignore                  # 确保 .ai_context 被提交到仓库 
+├──.gitignore                  # 确保 .ai_context 被提交到仓库 
+├── SUMMARY.md                # [自动生成] 项目仪表盘
+└── scripts/                  # 建议建个 scripts 文件夹整理脚本
+    ├── generate_summary.py   # [新增] 生成概览的 Python 脚本
+    └── load_context.sh       # [移动] 之前的一键加载脚本
 </pre>
+
 
 🚀 如何开始？
 创建文件夹：在项目根目录执行 mkdir -p .ai_context/TASKS .ai_context/DECISIONS。
