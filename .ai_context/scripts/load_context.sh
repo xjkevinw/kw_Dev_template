@@ -1,9 +1,10 @@
-#Mac/Linux 辅助脚本，需 chmod +x
-
 #!/bin/bash
-# 用法: ./load_context.sh TASKS/001_xxx.md
+# 用法: ./scripts/load_context.sh TASKS/001_xxx.md
 
-BASE_DIR="$(dirname "$0")"
+# 获取脚本所在的目录 (.ai_context/scripts/)
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+# 获取父目录 (.ai_context/)
+BASE_DIR="$(dirname "$SCRIPT_DIR")"
 TASK_FILE="$1"
 
 if [ -z "$TASK_FILE" ]; then
@@ -11,16 +12,18 @@ if [ -z "$TASK_FILE" ]; then
   exit 1
 fi
 
-echo "--- Loading Context for Claude Code ---"
+echo "--- Loading Context ---"
 echo ">>> SYSTEM PROFILE"
 cat "$BASE_DIR/SYSTEM_PROFILE.md"
 echo -e "\n\n>>> PROJECT CONTEXT"
 cat "$BASE_DIR/PROJECT_CONTEXT.md"
 echo -e "\n\n>>> ARCHITECTURE"
 cat "$BASE_DIR/ARCHITECTURE.md"
-echo -e "\n\n>>> CURRENT TASK"
-cat "$BASE_DIR/$TASK_FILE"
 
-# Mac 用户取消下面注释可直接复制到剪贴板
-# | pbcopy
-# echo "Done! Context copied to clipboard."
+echo -e "\n\n>>> CURRENT TASK"
+if [ -f "$BASE_DIR/$TASK_FILE" ]; then
+    cat "$BASE_DIR/$TASK_FILE"
+else
+    echo "Error: Task file '$BASE_DIR/$TASK_FILE' not found."
+    exit 1
+fi
