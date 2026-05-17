@@ -3,6 +3,7 @@ dw_Dev_template
 A lightweight, Git-based context engineering framework that gives AI coding agents persistent project memory across sessions.
 
 中文版本 / Chinese version
+
 Why This Exists
 Modern AI coding agents — Claude Code, Cursor, GitHub Copilot, Aider, and others — are powerful, but they suffer from a fundamental limitation: their context is ephemeral. Every new session starts blank. The architectural decisions you explained yesterday, the coding conventions your team agreed on last month, the reason you chose Postgres over MongoDB — all of it has to be re-explained, re-discovered, or simply lost.
 The result: inconsistent code, repeated mistakes, drifting architecture, and hours wasted re-establishing context every time you (or a teammate) start a new AI-assisted session.
